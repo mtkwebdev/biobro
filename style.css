@@ -1,0 +1,79 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    width: 95vw;
+    margin: 50px auto;
+}
+
+.patentRecordContainer{
+    width: 85vw;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+
+.resultsTable{
+    display:flex;
+    flex-direction: row;
+    /* border: 1px solid grey; */
+    margin-top: 50px;
+    padding: 20px;
+    /* border-radius: 20px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.result{
+    margin: 0px 10px ;
+    padding: 5px ;
+    width: 20%;
+    /* border-right: 1px solid grey; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.result:last-of-type{
+    border-right: 0px none;
+}
+
+.result h4 {
+    text-align: center;
+    /* border: 1px solid grey; */
+}
+
+.resultData{
+    border-bottom: 1px solid grey;
+    padding: 5px 10px
+}
+.resultData:last-of-type{
+    border-bottom: 0px none;
+}
+
+.deleteButton{
+    width: 20px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+	color: inherit;
+	border: 0px none grey;
+    border-radius: 5px;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.deleteButton:hover{
+    background: red;
+    color: white;
+}
+
+.buttonText{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+}

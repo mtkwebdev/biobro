@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioBro | LIMS System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <span class="redText">Bio</span>
+            <span class="blueText">BRO</span>
+        </h1>
+        <h3>LIMS <i> System</i></h3>
+        <div class="menu">
+            <a>Add Specimens</a>
+            <a>Add Patient Record</a>
+            <a>Haematology Results</a>
+            <a>Microbiology Results</a>
+            <a>Virology Results</a>
+            <a>Histopathology Results</a>
+            <a>Immunology Results</a>
+        </div>
+    </header>
+    <main>
+        <div class="patentRecordContainer">
+
+            <h1>Add Specimens</h1>
+            <form>
+                <div class="formGroup">
+                    <label for="patientLastName">Patient Last Name:</label>
+                    <input name="patientLastName" id="patientLastName" type="text">
+                </div>
+                
+                <div class="formGroup">
+                    <label for="patientfirstNames">Patient First Name:</label>
+                    <input name="patientfirstNames" id="patientfirstNames" type="text">
+                </div>
+
+                <div class="formGroup">
+                    <label for="patientAddress">Patient Address:</label>
+                    <textarea name="patientAddress" id="patientAddress" rows="1" cols="15"></textarea>
+                </div>
+                
+                <div class="formGroup">
+                    <label for="patientDOB">Patient D.O.B:</label>
+                    <input name="patientDOB" id="patientDOB" type="date">
+                </div>
+                
+                <div class="formGroup">
+                    <label for="patientCRN">Patient CRN:</label>
+                    <input name="patientCRN" id="patientCRN" type="number" max="9999">
+                </div>
+
+
+                <div class="formGroup">
+                    <label for="patientAddress">Specimen Type:</label>
+                    <select>
+                        <option></option>
+                        <option>Blood Specimen (FBC)</option>
+                        <option>Blood Specimen (Routine)</option>
+                        <option>Blood Specimen (Rapids)</option>
+                        <option>Blood Specimen (Liver)</option>
+                        <option>Microbiology Specimen (Tissue)</option>
+                        <option>Microbiology Specimen (Liquid)</option>
+                        <option>Microbiology Specimen (Digestive)</option>
+                        <option>Virology(Swab)</option>
+                        <option>Virology(RNA)</option>
+                        <option>Virology(Smear)</option>
+                        <option>Virology(Smear)</option>
+                        <option>Histopathology(Renals)</option>
+                        <option>Histopathology(Liver)</option>
+                        <option>Histopathology(Cancer)</option>
+                        <option>Histopathology(Routine)</option>
+                        <option>Histopathology(DNA)</option>
+                        <option>Histopathology(Specials Pannel)</option>
+                        <option>Immunology(Routine)</option>
+                        <option>Immunology(Rapid)</option>
+                        <option>Immunology(Specials)</option>
+                    </select>
+                </div>
+
+                 <div class="formGroup">
+                    <label for="patientAddress">Specimen Triage:</label>
+                    <select>
+                        <option></option>
+                        <option>Normal</option>
+                        <option>Private</option>
+                        <option>Critical (risk of sample expiry)</option>
+                        <option>Urgent</option>
+                    </select>
+                </div>
+
+                <div class="formGroup">
+                    <label for="sampleDescription">Sample Description:</label>
+                    <input name="sampleDescription" id="sampleDescription" type="text">
+                </div>
+
+                <button type="button">Add Sample</button>
+            </form>
+        </div>
+        <div class="resultsTable">
+
+            <div class="result">
+                <h4>Index</h4>
+                <div>
+                    <div class="resultData">1</div>
+                    <div class="resultData">2</div>
+                    <div class="resultData">3</div>
+                </div>
+            </div>
+
+            <div class="result">
+                <h4>DOB</h4>
+                <div>
+                    <div class="resultData">1</div>
+                    <div class="resultData">2</div>
+                    <div class="resultData">3</div>
+                </div>
+            </div>
+            
+            <div class="result">
+                <h4>CRN</h4>
+                <div>
+                    <div class="resultData">1</div>
+                    <div class="resultData">2</div>
+                    <div class="resultData">3</div>
+                </div>
+            </div>
+
+            <div class="result">
+                <h4>Type</h4>
+                <div>
+                    <div class="resultData">1</div>
+                    <div class="resultData">2</div>
+                    <div class="resultData">3</div>
+                </div>
+            </div>
+
+            <div class="result">
+                <h4>Triage</h4>
+                <div>
+                    <div class="resultData">1</div>
+                    <div class="resultData">2</div>
+                    <div class="resultData">3</div>
+                </div>
+            </div>
+
+            <div class="result">
+                <h4>Sample Desc</h4>
+                <div>
+                    <div class="resultData">1</div>
+                    <div class="resultData">2</div>
+                    <div class="resultData">3</div>
+                </div>
+            </div>
+
+            <div class="result">
+                <h4>Delete</h4>
+                    <button type="button" class="deleteButton"><span class="buttonText">X</span></button>
+                    <button type="button" class="deleteButton"><span class="buttonText">X</span></button>
+                    <button type="button" class="deleteButton"><span class="buttonText">X</span></button>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./app.js"></script>
+</body>
+</html>
