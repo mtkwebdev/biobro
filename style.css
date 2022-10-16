@@ -1,13 +1,76 @@
+:root{
+    --green: rgb(1, 163, 130);
+    --background-green: rgb(1, 163, 130,0.5);
+    --red:rgb(237, 39, 39);
+    --blue: rgb(47, 124, 231);
+}
+
+
 body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.title-container .logo{
+    width: 50px;
+    object-fit: contain;
+    height: auto;
+    margin: 0px 10px;
+}
+
+.title-container p{
+    height: fit-content;
+    /* font-size: 0.8rem; */
+    text-align: center;
+    margin: auto 0.5rem;
+    /* background-color: aliceblue; */
+    padding: 10px;
 }
 
 header{
-    width: 95vw;
-    margin: 50px auto;
+    margin-top: 50px;
 }
+
+header .title-text_red{
+    color: var(--red);
+}
+
+header .title-text_blue{
+ color: var(--blue);
+}
+
+
+.menu{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+header .menu-item{
+    margin: 0px 10px;
+    background-color: none;
+    padding: 15px;
+}
+
+header .menu-item:hover{
+    background-color: var(--background-green);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
 
 .patentRecordContainer{
     width: 85vw;
@@ -24,9 +87,12 @@ header{
     margin: 50px auto;
     padding: 100px 20px;
     /* border-radius: 20px; */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
 }
 
+.results-container{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
 .result{
     margin: 0px 10px ;
     padding: 5px ;
@@ -34,7 +100,7 @@ header{
     /* border-right: 1px solid grey; */
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
 }
 .result:last-of-type{
     border-right: 0px none;
@@ -77,4 +143,10 @@ header{
     flex-direction: row;
     margin: auto;
     text-align: center;
+}
+
+.diagrams{
+    width: 100px;
+    height: auto;
+    object-fit: contain;
 }
