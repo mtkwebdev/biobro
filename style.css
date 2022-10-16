@@ -1,14 +1,33 @@
 :root{
     --green: rgb(1, 163, 130);
-    --background-green: rgb(1, 163, 130,0.5);
     --red:rgb(237, 39, 39);
     --blue: rgb(47, 124, 231);
+    --none: rgba(0,0,0,0)
 }
 
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.column{
+    flex-direction: row;
+}
+
+.flex-start{
+    justify-self: flex-start;
+}
+
+.flex-end{
+    justify-self: flex-end;
+}
 
 body{
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
@@ -23,130 +42,148 @@ body{
 }
 
 .title-container .logo{
-    width: 50px;
+    width: 5rem;
     object-fit: contain;
     height: auto;
-    margin: 0px 10px;
+    margin: 0rem;
 }
 
 .title-container p{
     height: fit-content;
-    /* font-size: 0.8rem; */
     text-align: center;
     margin: auto 0.5rem;
-    /* background-color: aliceblue; */
     padding: 10px;
 }
 
-header{
-    margin-top: 50px;
-}
-
-header .title-text_red{
-    color: var(--red);
-}
-
-header .title-text_blue{
+.title-container .title-text_blue{
  color: var(--blue);
 }
 
-
 .menu{
-    margin: 10px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    background-color: var(--blue);
+    color: white;
 }
 
-header .menu-item{
+.menu-item{
     margin: 0px 10px;
     background-color: none;
-    padding: 15px;
+    padding: 20px;
 }
 
-header .menu-item:hover{
-    background-color: var(--background-green);
+.menu-item:hover{
+    background-color: rgba(255,255,255,0.8);
     cursor: pointer;
     transition: ease-in-out 0.2s;
+    color: black;
 }
 
+.tab-selector{
+    width: 100vw;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-.patentRecordContainer{
-    width: 85vw;
+.tab-button{
+    background-color: var(--none);
+    border: 0px solid rgba(0,0,0,0);
+    border-bottom: 2px var(--blue) solid;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin: 0px 2rem;
+    cursor: pointer;
+}
+
+.tab-button:hover{
+    border-bottom: 2px var(--green) solid;
+}
+
+.forms{
+    width: 50vw;
     padding: 20px;
     border-radius: 20px;
     margin: 50px auto;
 }
 
-.resultsTable{
-    width: 95%;
-    display:flex;
-    flex-direction: row;
-    /* border: 1px solid grey; */
-    margin: 50px auto;
-    padding: 100px 20px;
-    /* border-radius: 20px; */
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
-}
-
-.results-container{
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-.result{
-    margin: 0px 10px ;
-    padding: 5px ;
-    width: 20%;
-    /* border-right: 1px solid grey; */
+.form-content{
     display: flex;
-    flex-direction: column;
+} 
 
-}
-.result:last-of-type{
-    border-right: 0px none;
-}
-
-.result h4 {
-    text-align: center;
-    /* border: 1px solid grey; */
+.form-content form{
+    width: 50%;
 }
 
-.resultData{
-    border-bottom: 1px solid grey;
-    padding: 5px 10px
-}
-.resultData:last-of-type{
-    border-bottom: 0px none;
+.form-content form{
+    width: 80%;
 }
 
-.deleteButton{
-    width: 20px;
-    display: flex;
-    margin: auto;
-    text-align: center;
-    background: rgba(0,0,0,0.1);
-	color: inherit;
-	border: 0px none grey;
-    border-radius: 5px;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-}
-.deleteButton:hover{
-    background: red;
+.form-button{
+    padding: 15px;
     color: white;
-}
-
-.buttonText{
-    display: flex;
-    flex-direction: row;
-    margin: auto;
+    background-color: var(--blue);
     text-align: center;
+    border: 0px solid var(--none);
+    border-radius: 5px;
+    width: 5rem;
+    cursor: pointer;
 }
 
-.diagrams{
-    width: 100px;
+.new-patient-img{
+    margin-right: 2rem;
+    transform: rotateZ(-20deg);
+    width: 15vw;
     height: auto;
     object-fit: contain;
+}
+
+label{
+    display: block;
+    margin: 20px auto 10px auto;
+    font-weight: 600;
+}
+
+input{
+    padding: 15px;
+    width: 95%;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: 0px;
+}
+
+input:hover{
+    border: 1px solid var(--green);
+    transition: ease-in-out 0.2s;
+}
+
+select{
+    padding: 15px;
+    width: 95%;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: 0px;
+}
+
+select:hover{
+    border: 1px solid var(--green);
+    transition: ease-in-out 0.2s;
+}
+
+textarea{
+    width: 95%;
+    padding: 10px;
+    min-height: 2rem;
+    max-height: 5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: 0px;
+}
+
+textarea:hover{
+    border: 1px solid var(--green);
+    transition: ease-in-out 0.2s;
 }

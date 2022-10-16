@@ -27,8 +27,6 @@
         </div>
         
         <div class="menu">
-            <a class="menu-item">Add Specimens</a>
-            <a class="menu-item">Add Patient Record</a>
             <a class="menu-item" >Haematology Results</a>
             <a class="menu-item" >Microbiology Results</a>
             <a class="menu-item" >Virology Results</a>
@@ -38,167 +36,116 @@
     </header>
     <main>
         
-        <div>
-            <h1>Add Patient Information</h1>
-            <img class="diagrams" src="./media/edit.webp" alt="">
-    <form>
-    <div class="formGroup">
-        <label for="patientLastName">Patient Last Name:</label>
-        <input name="patientLastName" id="patientLastName" type="text">
-    </div>
-    
-    <div class="formGroup">
-        <label for="patientfirstNames">Patient First Name:</label>
-        <input name="patientfirstNames" id="patientfirstNames" type="text">
-    </div>
+        <div class="tab-selector">
+            <button class="tab-button">Add new Patient information</button>
+            <button class="tab-button">Add Specimen</button>
+        </div>
+<div>
 
-    <div class="formGroup">
-        <label for="patientAddress">Patient Address:</label>
-        <textarea name="patientAddress" id="patientAddress" rows="1" cols="15"></textarea>
-    </div>
-    
-    <div class="formGroup">
-        <label for="patientDOB">Patient D.O.B:</label>
-        <input name="patientDOB" id="patientDOB" type="date">
-    </div>
-    
-    <div class="formGroup">
-        <label for="patientCRN">Patient CRN:</label>
-        <input name="patientCRN" id="patientCRN" type="number" max="9999">
-    </div>
-
-    </form>
-</div>
-
-
-        <div class="patentRecordContainer">
-            <img class="diagrams" src="./media/testtubes.webp" alt="">
-            
-            <h1>Add Specimens</h1>
+    <div id="patentRecordContainer" class="forms">
+        <h1>Add Patient Information</h1>
+        <div class="form-content">
+            <img class="new-patient-img" src="./media/edit.webp" alt="">
             <form>
-                <label for="">Select Patient</label>
-                <select>
-                    <option value="0"></option>
-                    <option value="1">David Davidson 220830-23424</option>
-                    <option value="2">Christopher Christian 021084-8923</option>
-                    <option value="3">James Jameson 110110-35632</option>
-                </select>
-                
                 <div class="formGroup">
-                    <label for="patientAddress">Specimen Type:</label>
-                    <select>
-                        <option></option>
-                        <option>Blood Specimen (FBC)</option>
-                        <option>Blood Specimen (Routine)</option>
-                        <option>Blood Specimen (Rapids)</option>
-                        <option>Blood Specimen (Liver)</option>
-                        <option>Microbiology Specimen (Tissue)</option>
-                        <option>Microbiology Specimen (Liquid)</option>
-                        <option>Microbiology Specimen (Digestive)</option>
-                        <option>Virology(Swab)</option>
-                        <option>Virology(RNA)</option>
-                        <option>Virology(Smear)</option>
-                        <option>Virology(Smear)</option>
-                        <option>Histopathology(Renals)</option>
-                        <option>Histopathology(Liver)</option>
-                        <option>Histopathology(Cancer)</option>
-                        <option>Histopathology(Routine)</option>
-                        <option>Histopathology(DNA)</option>
-                        <option>Histopathology(Specials Pannel)</option>
-                        <option>Immunology(Routine)</option>
-                        <option>Immunology(Rapid)</option>
-                        <option>Immunology(Specials)</option>
-                    </select>
+                    <label for="patientLastName">Patient Last Name:</label>
+                    <input name="patientLastName" id="patientLastName" type="text">
                 </div>
                 
                 <div class="formGroup">
-                    <label for="patientAddress">Specimen Triage:</label>
-                    <select>
-                        <option></option>
-                        <option>Normal</option>
-                        <option>Private</option>
-                        <option>Critical (risk of sample expiry)</option>
-                        <option>Urgent</option>
-                    </select>
+                    <label for="patientfirstNames">Patient First Name:</label>
+                    <input name="patientfirstNames" id="patientfirstNames" type="text">
                 </div>
                 
                 <div class="formGroup">
-                    <label for="sampleDescription">Sample Description:</label>
-                    <input name="sampleDescription" id="sampleDescription" type="text">
+                    <label for="patientAddress">Patient Address:</label>
+                    <textarea name="patientAddress" id="patientAddress" rows="1" cols="15"></textarea>
                 </div>
                 
-                <button type="button">Add Sample</button>
+                <div class="formGroup">
+                    <label for="patientDOB">Patient D.O.B:</label>
+                    <input name="patientDOB" id="patientDOB" type="date">
+                </div>
+                
+                <div class="formGroup">
+                    <label for="patientCRN">Patient CRN:</label>
+                    <input name="patientCRN" id="patientCRN" type="number" max="9999">
+                </div>
+                
             </form>
         </div>
-
-        <div class="results-container">
-
-            <h1>Specimens</h1>
-            <img class="diagrams" src="./media/tests.webp" alt="">
-            <div class="resultsTable">
-                <div class="result">
-                    <h4>Index</h4>
-                    <div>
-                        <div class="resultData">1</div>
-                        <div class="resultData">2</div>
-                        <div class="resultData">3</div>
-                    </div>
-                </div>
-                
-                <div class="result">
-                    <h4>DOB</h4>
-                    <div>
-                        <div class="resultData">1</div>
-                        <div class="resultData">2</div>
-                        <div class="resultData">3</div>
-                    </div>
-                </div>
-                
-                <div class="result">
-                    <h4>CRN</h4>
-                    <div>
-                        <div class="resultData">1</div>
-                        <div class="resultData">2</div>
-                        <div class="resultData">3</div>
-                    </div>
-                </div>
-                
-                <div class="result">
-                    <h4>Type</h4>
-                    <div>
-                        <div class="resultData">1</div>
-                        <div class="resultData">2</div>
-                        <div class="resultData">3</div>
-                    </div>
-                </div>
-                
-                <div class="result">
-                    <h4>Triage</h4>
-                    <div>
-                        <div class="resultData">1</div>
-                        <div class="resultData">2</div>
-                        <div class="resultData">3</div>
-                    </div>
-                </div>
-                
-                <div class="result">
-                    <h4>Sample Desc</h4>
-                    <div>
-                        <div class="resultData">1</div>
-                        <div class="resultData">2</div>
-                        <div class="resultData">3</div>
-                    </div>
-                </div>
-                
-                <div class="result">
-                    <h4>Delete</h4>
-                    <button type="button" class="deleteButton"><span class="buttonText">X</span></button>
-                    <button type="button" class="deleteButton"><span class="buttonText">X</span></button>
-                    <button type="button" class="deleteButton"><span class="buttonText">X</span></button>
-                </div>
-            </div>
-        </div>
+        <button class="form-button" type="button">Save</button>
+    </div>
+    
+    
+    <div id="patentResultsContainer" class="forms">
         
+        <h1>Add Specimens</h1>
+        <form>
+            <label for="">Select Patient</label>
+            <select>
+                <option value="0"></option>
+                <option value="1">David Davidson 220830-23424</option>
+                <option value="2">Christopher Christian 021084-8923</option>
+                <option value="3">James Jameson 110110-35632</option>
+            </select>
+            
+            <div class="formGroup">
+                <label for="patientAddress">Specimen Type:</label>
+                <select>
+                    <option></option>
+                    <option>Blood Specimen (FBC)</option>
+                    <option>Blood Specimen (Routine)</option>
+                    <option>Blood Specimen (Rapids)</option>
+                    <option>Blood Specimen (Liver)</option>
+                    <option>Microbiology Specimen (Tissue)</option>
+                    <option>Microbiology Specimen (Liquid)</option>
+                    <option>Microbiology Specimen (Digestive)</option>
+                    <option>Virology(Swab)</option>
+                    <option>Virology(RNA)</option>
+                    <option>Virology(Smear)</option>
+                    <option>Virology(Smear)</option>
+                    <option>Histopathology(Renals)</option>
+                    <option>Histopathology(Liver)</option>
+                    <option>Histopathology(Cancer)</option>
+                    <option>Histopathology(Routine)</option>
+                    <option>Histopathology(DNA)</option>
+                    <option>Histopathology(Specials Pannel)</option>
+                    <option>Immunology(Routine)</option>
+                    <option>Immunology(Rapid)</option>
+                    <option>Immunology(Specials)</option>
+                </select>
+            </div>
+            
+            <div class="formGroup">
+                <label for="patientAddress">Specimen Triage:</label>
+                <select>
+                    <option></option>
+                    <option>Normal</option>
+                    <option>Private</option>
+                    <option>Critical (risk of sample expiry)</option>
+                    <option>Urgent</option>
+                </select>
+            </div>
+            
+            <div class="formGroup">
+                <label for="sampleDescription">Sample Description:</label>
+                <input name="sampleDescription" id="sampleDescription" type="text">
+            </div>
+            
+            <button type="button">Add Sample</button>
+        </form>
+        <img class="diagrams" src="./media/testtubes.webp" alt="">
+    </div>
+    
+</div>
+
+<div class="results-container">
+        <img class="diagrams" src="./media/tests.webp" alt="">
+        
+        <h1>Specimens</h1>
+           </div>
+
         </main>
         <footer></footer>
         <script src="./app.js"></script>
