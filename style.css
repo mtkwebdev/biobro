@@ -2,7 +2,11 @@
     --green: rgb(1, 163, 130);
     --red:rgb(237, 39, 39);
     --blue: rgb(47, 124, 231);
-    --none: rgba(0,0,0,0)
+    --orange: rgb(255, 179, 0);
+    --none: rgba(0,0,0,0);
+    --line-shaddow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    --light-shaddow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --card-shaddow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .flex{
@@ -104,10 +108,19 @@ body{
 }
 
 .forms{
-    width: 50vw;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 50px auto;
+    display:flex;
+    flex-direction: column;
+    min-width: 50vw;
+    max-width: 80vw;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    box-shadow: var(--card-shaddow);
+}
+
+.forms button{
+    align-self: flex-end;
+    margin: 2rem 0rem 2rem 0rem;
 }
 
 .form-content{
@@ -115,11 +128,8 @@ body{
 } 
 
 .form-content form{
-    width: 50%;
-}
-
-.form-content form{
-    width: 80%;
+    min-width: 60%;
+    /* margin: auto; */
 }
 
 .form-button{
@@ -134,11 +144,31 @@ body{
 }
 
 .new-patient-img{
-    margin-right: 2rem;
     transform: rotateZ(-20deg);
-    width: 15vw;
+    width: 30%;
+    margin: auto;
+    /* margin-left: -0.2rem; */
     height: auto;
-    object-fit: contain;
+    object-fit: scale-down;
+}
+
+.test-tubes-img{
+    width: 30%;
+    height: auto;
+    margin: auto;
+    height: auto;
+    object-fit: scale-down;
+}
+
+.patient-results-img{
+    width: 20%;
+    height: auto;
+    /* margin: auto 2rem;
+    margin-left: -1rem; */
+    margin: auto;
+    object-fit: scale-down;
+    background: rgba(0,0,0,0.05);
+    border-radius: 2rem;
 }
 
 label{
@@ -149,10 +179,11 @@ label{
 
 input{
     padding: 15px;
-    width: 95%;
+    width: 92.5%;
     border-radius: 15px;
     border: 1px solid rgba(0,0,0,0.2);
     outline: 0px;
+    font-size: 1rem;
 }
 
 input:hover{
@@ -162,10 +193,11 @@ input:hover{
 
 select{
     padding: 15px;
-    width: 95%;
+    width: 100%;
     border-radius: 15px;
     border: 1px solid rgba(0,0,0,0.2);
     outline: 0px;
+    font-size: 1rem;
 }
 
 select:hover{
@@ -174,16 +206,70 @@ select:hover{
 }
 
 textarea{
-    width: 95%;
+    width: 92.5%;
     padding: 10px;
     min-height: 2rem;
     max-height: 5rem;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.2);
     outline: 0px;
+    font-size: 1rem;
 }
 
 textarea:hover{
     border: 1px solid var(--green);
     transition: ease-in-out 0.2s;
+}
+
+table {
+    margin: 5rem auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 1rem 2rem;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+
+  .tablet{
+    color: white;
+    font-weight: 800;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+  }
+
+.tablet-normal{
+    background-color: var(--green);
+}
+.tablet-private{
+    background-color: var(--blue);
+}
+.tablet-critical{
+    background-color: var(--orange);
+}
+.tablet-urgent{
+    background-color: var(--red);
 }
