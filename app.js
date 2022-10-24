@@ -7,8 +7,8 @@ const addSpecimen = document.querySelector("#add-specimen");
 const showSpecimens = document.querySelector("#show-specimens");
 
 // tabs to select
-const patentRecordContainer = document.querySelector("#patent-record-container");
-const patentSpecimensContainer = document.querySelector("#patent-specimens-container");
+const patientRecordContainer = document.querySelector("#patient-record-container");
+const patientSpecimensContainer = document.querySelector("#patient-specimens-container");
 const patientResultsContainer = document.querySelector("#patient-results-container");
 
 // Dry functions 
@@ -33,14 +33,14 @@ const patientResultsContainer = document.querySelector("#patient-results-contain
 				removeAllTabButtonActiveClasses();
 				newPatient.classList.add("tab-active");
 				hideAllTabContent()
-				patentRecordContainer.classList.remove("hide");
+				patientRecordContainer.classList.remove("hide");
 				break;
 				
 				case "add-specimen":
 					removeAllTabButtonActiveClasses();
 					addSpecimen.classList.add("tab-active");
 					hideAllTabContent()
-					patentSpecimensContainer.classList.remove("hide");
+					patientSpecimensContainer.classList.remove("hide");
 					break;
 					
 					case "show-specimens":
