@@ -43,24 +43,24 @@
 			<div id="patient-record-container" class="tab-content">
 				<h1>Add Patient Information</h1>
 				<div class="form-content">
-					<form>
+					<form id="patient-record-container-form">
 						<div class="formGroup">
 							<label for="patientLastName">Patient Last Name:</label>
-							<input name="patientLastName" id="patientLastName" type="text" />
+							<input required name="patientLastName" id="patientLastName" type="text" />
 						</div>
 
 						<div class="formGroup">
-							<label for="patientfirstNames">Patient First Name:</label>
-							<input
-								name="patientfirstNames"
-								id="patientfirstNames"
+							<label for="patientFirstNames">Patient First Name:</label>
+							<input required
+								name="patientFirstNames"
+								id="patientFirstNames"
 								type="text"
 							/>
 						</div>
 
 						<div class="formGroup">
 							<label for="patientAddress">Patient Address:</label>
-							<textarea
+							<textarea required
 								name="patientAddress"
 								id="patientAddress"
 								rows="1"
@@ -70,22 +70,22 @@
 
 						<div class="formGroup">
 							<label for="patientDOB">Patient D.O.B:</label>
-							<input name="patientDOB" id="patientDOB" type="date" />
+							<input required name="patientDOB" id="patientDOB" type="date" />
 						</div>
 
 						<div class="formGroup">
 							<label for="patientCRN">Patient CRN:</label>
-							<input
+							<input required
 								name="patientCRN"
 								id="patientCRN"
 								type="number"
 								max="9999"
 							/>
 						</div>
+						<button class="form-button" type="submit">Save</button>
 					</form>
 					<img class="new-patient-img" src="./media/edit.webp" alt="" />
 				</div>
-				<button class="form-button" type="button">Save</button>
 			</div>
 
 			<div id="patient-specimens-container" class="tab-content">
@@ -93,7 +93,7 @@
 				<div class="form-content">
 					<form>
 						<label for="">Select Patient</label>
-						<select>
+						<select required>
 							<option value="0"></option>
 							<option value="1">David Davidson 220830-23424</option>
 							<option value="2">Christopher Christian 021084-8923</option>
@@ -102,7 +102,7 @@
 
 						<div class="formGroup">
 							<label for="patientAddress">Specimen Type:</label>
-							<select>
+							<select required>
 								<option></option>
 								<option>Blood Specimen (FBC)</option>
 								<option>Blood Specimen (Routine)</option>
@@ -129,7 +129,7 @@
 
 						<div class="formGroup">
 							<label for="patientAddress">Specimen Triage:</label>
-							<select>
+							<select required>
 								<option></option>
 								<option>Normal</option>
 								<option>Private</option>
@@ -140,7 +140,7 @@
 
 						<div class="formGroup">
 							<label for="sampleDescription">Sample Description:</label>
-							<input
+							<input required
 								name="sampleDescription"
 								id="sampleDescription"
 								type="text"

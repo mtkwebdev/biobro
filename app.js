@@ -51,3 +51,31 @@ const patientResultsContainer = document.querySelector("#patient-results-contain
 						break;
 		}
 	});
+	
+let patientRecord ={}
+let allPatientRecords =[]
+let patientSpecimen ={}
+let allSpecimens = []
+let allPatientResults =[]
+
+const patientRecordContainerForm = document.getElementById("patient-record-container-form");
+patientRecordContainerForm.addEventListener('submit', (e) => {
+	// stop form submission
+	e.preventDefault();
+		patientRecord.lastName = document.querySelector('#patientLastName').value
+		patientRecord.firstNames = document.querySelector('#patientFirstNames').value
+		patientRecord.patientAddress = document.querySelector('#patientAddress').value
+		patientRecord.patientDOB = document.querySelector('#patientDOB').value
+		patientRecord.patientCRN = document.querySelector('#patientCRN').value
+});
+
+// const patientRecordContainerForm = document.getElementById("patient-record-container-form");
+// patientRecordContainerForm.addEventListener('submit', (e) => {
+// 	// stop form submission
+// 	e.preventDefault();
+// 		patientRecord.lastName = document.querySelector('#patientLastName').value
+// 		patientRecord.firstNames = document.querySelector('#patientFirstNames').value
+// 		patientRecord.patientAddress = document.querySelector('#patientAddress').value
+// 		patientRecord.patientDOB = document.querySelector('#patientDOB').value
+// 		patientRecord.patientCRN = document.querySelector('#patientCRN').value
+// });
