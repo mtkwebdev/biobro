@@ -1,195 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioBro | LIMS System</title>
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BioBro | LIMS System</title>
+		<link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="title-container">
+				<img class="logo" src="./media/blueLogo.webp" alt="" />
+				<h1>
+					<span>Bio</span>
+					<span class="title-text_blue">PRO</span>
+				</h1>
+				<p>LIMS <i> System</i></p>
+			</div>
 
-</head>
-<body>
-    <header>
-        <div class="title-container">
+			<div class="menu">
+				<a class="menu-item">Haematology Results</a>
+				<a class="menu-item">Microbiology Results</a>
+				<a class="menu-item">Virology Results</a>
+				<a class="menu-item">Histopathology Results</a>
+				<a class="menu-item">Immunology Results</a>
+			</div>
+		</header>
+		<main>
+			<div class="tab-selector">
+				<button id="add-new-patient" class="tab-button">Add new Patient information</button>
+				<button id="add-specimen" class="tab-button">Add Specimen</button>
+				<button id="show-specimens" class="tab-button">Specimens Added</button>
+			</div>
 
-            <img class="logo" src="./media/blueLogo.webp" alt="">
-            <h1>
-                <span >Bio</span>
-                <span class="title-text_blue">PRO</span>
-            </h1>
-            <p>LIMS <i> System</i> 
-            
-            </p>
-        </div>
-        
-        <div class="menu">
-            <a class="menu-item" >Haematology Results</a>
-            <a class="menu-item" >Microbiology Results</a>
-            <a class="menu-item" >Virology Results</a>
-            <a class="menu-item" >Histopathology Results</a>
-            <a class="menu-item" >Immunology Results</a>
-        </div>
-    </header>
-    <main>
-        
-        <div class="tab-selector">
-            <button class="tab-button">Add new Patient information</button>
-            <button class="tab-button">Add Specimen</button>
-            <button class="tab-button">Specimens Added</button>
-        </div>
+			<div id="patent-record-container" class="tab-content">
+				<h1>Add Patient Information</h1>
+				<div class="form-content">
+					<form>
+						<div class="formGroup">
+							<label for="patientLastName">Patient Last Name:</label>
+							<input name="patientLastName" id="patientLastName" type="text" />
+						</div>
 
-    <div id="patentRecordContainer" class="forms">
-        <h1>Add Patient Information</h1>
-        <div class="form-content">
-            <form>
-                <div class="formGroup">
-                    <label for="patientLastName">Patient Last Name:</label>
-                    <input name="patientLastName" id="patientLastName" type="text">
-                </div>
-                
-                <div class="formGroup">
-                    <label for="patientfirstNames">Patient First Name:</label>
-                    <input name="patientfirstNames" id="patientfirstNames" type="text">
-                </div>
-                
-                <div class="formGroup">
-                    <label for="patientAddress">Patient Address:</label>
-                    <textarea name="patientAddress" id="patientAddress" rows="1" cols="15"></textarea>
-                </div>
-                
-                <div class="formGroup">
-                    <label for="patientDOB">Patient D.O.B:</label>
-                    <input name="patientDOB" id="patientDOB" type="date">
-                </div>
-                
-                <div class="formGroup">
-                    <label for="patientCRN">Patient CRN:</label>
-                    <input name="patientCRN" id="patientCRN" type="number" max="9999">
-                </div>
-                
-            </form>
-            <img class="new-patient-img" src="./media/edit.webp" alt="">
-        </div>
-        <button class="form-button" type="button">Save</button>
-    </div>
-    
-    
-    <div id="patentResultsContainer" class="forms">
-        <h1>Add Specimens</h1>
-        <div class="form-content">
+						<div class="formGroup">
+							<label for="patientfirstNames">Patient First Name:</label>
+							<input
+								name="patientfirstNames"
+								id="patientfirstNames"
+								type="text"
+							/>
+						</div>
 
-            <form>
-                <label for="">Select Patient</label>
-                <select>
-                    <option value="0"></option>
-                    <option value="1">David Davidson 220830-23424</option>
-                    <option value="2">Christopher Christian 021084-8923</option>
-                    <option value="3">James Jameson 110110-35632</option>
-                </select>
-                
-                <div class="formGroup">
-                    <label for="patientAddress">Specimen Type:</label>
-                    <select>
-                        <option></option>
-                        <option>Blood Specimen (FBC)</option>
-                        <option>Blood Specimen (Routine)</option>
-                        <option>Blood Specimen (Rapids)</option>
-                        <option>Blood Specimen (Liver)</option>
-                        <option>Microbiology Specimen (Tissue)</option>
-                        <option>Microbiology Specimen (Liquid)</option>
-                        <option>Microbiology Specimen (Digestive)</option>
-                        <option>Virology(Swab)</option>
-                        <option>Virology(RNA)</option>
-                        <option>Virology(Smear)</option>
-                        <option>Virology(Smear)</option>
-                        <option>Histopathology(Renals)</option>
-                        <option>Histopathology(Liver)</option>
-                        <option>Histopathology(Cancer)</option>
-                        <option>Histopathology(Routine)</option>
-                        <option>Histopathology(DNA)</option>
-                        <option>Histopathology(Specials Pannel)</option>
-                        <option>Immunology(Routine)</option>
-                        <option>Immunology(Rapid)</option>
-                        <option>Immunology(Specials)</option>
-                    </select>
-                </div>
-                
-                <div class="formGroup">
-                    <label for="patientAddress">Specimen Triage:</label>
-                    <select>
-                        <option></option>
-                        <option>Normal</option>
-                        <option>Private</option>
-                        <option>Critical (risk of sample expiry)</option>
-                        <option>Urgent</option>
-                    </select>
-                </div>
-                
-                <div class="formGroup">
-                    <label for="sampleDescription">Sample Description:</label>
-                    <input name="sampleDescription" id="sampleDescription" type="text">
-                </div>
-            </form>
-            <img class="test-tubes-img" src="./media/testtubes.webp" alt="">
-        </div>
-        <button class="form-button" type="button">Save</button>
-    </div>
-    
-    
-    <div id="results-container" class="forms" >
-            <h1>Specimens</h1>
-            <div class="flex row">
+						<div class="formGroup">
+							<label for="patientAddress">Patient Address:</label>
+							<textarea
+								name="patientAddress"
+								id="patientAddress"
+								rows="1"
+								cols="15"
+							></textarea>
+						</div>
 
-                <img class="patient-results-img" src="./media/tests.webp" alt="">
-                <table>
-                    <tr>
-                        <th>Patient DOB / CRN</th>
-                        <th>Specimen Type</th>
-                        <th>Specimen Triage</th>
-                        <th>Sample Description</th>
-                    </tr>
-                    <tr>
-                        <td>201084/2342233</td>
-                        <td>Blood Specimen (FBC)</td>
-                        <td><span class="tablet tablet-normal">Normal</span></td>
-                        <td><p class="text-wrap">Sample Desc</p></td>
-                    </tr>
-                    <tr>
-                        <td>201084/2342233</td>
-                        <td>Blood Specimen (FBC)</td>
-                        <td><span class="tablet tablet-private">Private</span></td>
-                        <td><p class="text-wrap">Sample Desc</p></td>
-                    </tr>
-                    <tr>
-                        <td>201084/2342233</td>
-                        <td>Blood Specimen (FBC)</td>
-                        <td><span class="tablet tablet-critical">Critical</span></td>
-                        <td><p class="text-wrap">Sample Desc</p></td>
-                    </tr>
-                    <tr>
-                        <td>201084/2342233</td>
-                        <td>Blood Specimen (FBC)</td>
-                        <td><span class="tablet tablet-urgent">Urgent</span></td>
-                        <td><p class="text-wrap">Sample Desc</p></td>
-                    </tr>
-                </table>
-            </div>
-                
-    </div>
-    
+						<div class="formGroup">
+							<label for="patientDOB">Patient D.O.B:</label>
+							<input name="patientDOB" id="patientDOB" type="date" />
+						</div>
 
-    </main>
+						<div class="formGroup">
+							<label for="patientCRN">Patient CRN:</label>
+							<input
+								name="patientCRN"
+								id="patientCRN"
+								type="number"
+								max="9999"
+							/>
+						</div>
+					</form>
+					<img class="new-patient-img" src="./media/edit.webp" alt="" />
+				</div>
+				<button class="form-button" type="button">Save</button>
+			</div>
 
-    <footer>
-        <small>Created By Mohammad Kawadri, as part of a tutorial series made for friends 2022</small>
-    </footer>
+			<div id="patent-specimens-container" class="tab-content">
+				<h1>Add Specimens</h1>
+				<div class="form-content">
+					<form>
+						<label for="">Select Patient</label>
+						<select>
+							<option value="0"></option>
+							<option value="1">David Davidson 220830-23424</option>
+							<option value="2">Christopher Christian 021084-8923</option>
+							<option value="3">James Jameson 110110-35632</option>
+						</select>
 
-    <script src="./app.js"></script>
+						<div class="formGroup">
+							<label for="patientAddress">Specimen Type:</label>
+							<select>
+								<option></option>
+								<option>Blood Specimen (FBC)</option>
+								<option>Blood Specimen (Routine)</option>
+								<option>Blood Specimen (Rapids)</option>
+								<option>Blood Specimen (Liver)</option>
+								<option>Microbiology Specimen (Tissue)</option>
+								<option>Microbiology Specimen (Liquid)</option>
+								<option>Microbiology Specimen (Digestive)</option>
+								<option>Virology(Swab)</option>
+								<option>Virology(RNA)</option>
+								<option>Virology(Smear)</option>
+								<option>Virology(Smear)</option>
+								<option>Histopathology(Renals)</option>
+								<option>Histopathology(Liver)</option>
+								<option>Histopathology(Cancer)</option>
+								<option>Histopathology(Routine)</option>
+								<option>Histopathology(DNA)</option>
+								<option>Histopathology(Specials Pannel)</option>
+								<option>Immunology(Routine)</option>
+								<option>Immunology(Rapid)</option>
+								<option>Immunology(Specials)</option>
+							</select>
+						</div>
 
-    </body>
+						<div class="formGroup">
+							<label for="patientAddress">Specimen Triage:</label>
+							<select>
+								<option></option>
+								<option>Normal</option>
+								<option>Private</option>
+								<option>Critical (risk of sample expiry)</option>
+								<option>Urgent</option>
+							</select>
+						</div>
 
+						<div class="formGroup">
+							<label for="sampleDescription">Sample Description:</label>
+							<input
+								name="sampleDescription"
+								id="sampleDescription"
+								type="text"
+							/>
+						</div>
+					</form>
+					<img class="test-tubes-img" src="./media/testtubes.webp" alt="" />
+				</div>
+				<button class="form-button" type="button">Save</button>
+			</div>
+
+			<div id="patient-results-container" class="tab-content">
+				<h1>Specimens</h1>
+				<div class="flex row">
+					<img class="patient-results-img" src="./media/tests.webp" alt="" />
+					<table>
+						<tr>
+							<th>Patient DOB / CRN</th>
+							<th>Specimen Type</th>
+							<th>Specimen Triage</th>
+							<th>Sample Description</th>
+						</tr>
+						<tr>
+							<td>201084/2342233</td>
+							<td>Blood Specimen (FBC)</td>
+							<td><span class="tablet tablet-normal">Normal</span></td>
+							<td><p class="text-wrap">Sample Desc</p></td>
+						</tr>
+						<tr>
+							<td>201084/2342233</td>
+							<td>Blood Specimen (FBC)</td>
+							<td><span class="tablet tablet-private">Private</span></td>
+							<td><p class="text-wrap">Sample Desc</p></td>
+						</tr>
+						<tr>
+							<td>201084/2342233</td>
+							<td>Blood Specimen (FBC)</td>
+							<td><span class="tablet tablet-critical">Critical</span></td>
+							<td><p class="text-wrap">Sample Desc</p></td>
+						</tr>
+						<tr>
+							<td>201084/2342233</td>
+							<td>Blood Specimen (FBC)</td>
+							<td><span class="tablet tablet-urgent">Urgent</span></td>
+							<td><p class="text-wrap">Sample Desc</p></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<small
+				>Created By Mohammad Kawadri, as part of a tutorial series made for
+				friends 2022</small
+			>
+		</footer>
+
+		<script src="./app.js"></script>
+	</body>
 </html>
