@@ -16,6 +16,7 @@ const patientSpecimensContainerForm = document.getElementById("patient-specimens
 
 // specific inputs 
 const selectPatient = document.getElementById("select-patient")
+const searchResults = document.getElementById("search-results")
 
 // data stores
 let allPatientRecords = []
@@ -92,8 +93,7 @@ let newPatientSpecimen = {}
 		newPatientSpecimen.description = document.querySelector('#sample-description').value
 
 		let duplicateSpecimen = allSpecimens.findIndex(existingSpecimens => String(Object.values(existingSpecimens)) === String(Object.values(newPatientSpecimen)))
-		console.log(String(Object.values(newPatientSpecimen)))
-
+		// console.log(String(Object.values(newPatientSpecimen)))
 		if(duplicateSpecimen === -1){
 			allSpecimens.push(newPatientSpecimen)
 		}
@@ -144,11 +144,52 @@ patientRecordContainerForm.addEventListener('submit', (e) => {
 	// stop automatic page reload
 	e.preventDefault();
 	addPatientRecord()
-	console.log(allPatientRecords)
+	// console.log(allPatientRecords)
 });
 
 patientSpecimensContainerForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	addSpecimensToRecord()
-	console.log(allSpecimens)
+	// console.log(allSpecimens)
+})
+
+const resultsTable = document.getElementById('results-table')
+const defaultTable = `	
+<tr>
+	<th>Patient DOB / CRN</th>
+	<th>Specimen Type</th>
+	<th>Specimen Triage</th>
+	<th>Sample Description</th>
+</tr>
+`
+
+function matey(e){
+
+	resultsTable.innerHTML = defaultTable
+	
+	for(let i = 0; i < allSpecimens.length; i++){
+		if(allSpecimens[i].patient.toLowerCase().includes(e.target.value)){
+			let row = document.createElement('tr')
+
+			let results = `
+				<tr>
+					<td>${allSpecimens[i].patient}</td>
+					<td>${allSpecimens[i].specimen}</td>
+					<td><span class="tablet tablet-${allSpecimens[i].triage.toLowerCase()}">${allSpecimens[i].triage}</span></td>
+					<td><p class="text-wrap">${allSpecimens[i].description}</p></td>
+				</tr>
+				`
+				row.innerHTML = results
+			resultsTable.appendChild(row)
+		}
+	}
+}
+
+searchResults.addEventListener('input',(e)=>{
+	// console.log(e.target.value)
+	if(e.target.value){
+		matey(e)
+	}else{
+		resultsTable.innerHTML = defaultTable
+	}
 })

@@ -154,44 +154,45 @@
 			</div>
 			<div id="patient-results-container" class="tab-content">
 				<h1>Specimens</h1>
-				<h4>Search for Patient last name, CRN, or Date of Birth to view specimen records</h4>
-				<input type="search" id="select-patient" name="select-patient" required>
+				<label for="search-results">Search for Patient last name, CRN, or Date of Birth to view specimen records</label>
+				<input type="search" id="search-results" name="search-results">
 				</input>
 				<div class="flex row">
 					<img class="patient-results-img" src="./media/tests.webp" alt="" />
-					<table>
-						<tr>
-							<th>Patient DOB / CRN</th>
-							<th>Specimen Type</th>
-							<th>Specimen Triage</th>
-							<th>Sample Description</th>
-						</tr>
-						<tr id="">
-							<td>201084/2342233</td>
-							<td>Blood Specimen (FBC)</td>
-							<td><span class="tablet tablet-normal">Normal</span></td>
-							<td><p class="text-wrap">Sample Desc</p></td>
-						</tr>
-						<tr>
-							<td>201084/2342233</td>
-							<td>Blood Specimen (FBC)</td>
-							<td><span class="tablet tablet-private">Private</span></td>
-							<td><p class="text-wrap">Sample Desc</p></td>
-						</tr>
-						<tr>
-							<td>201084/2342233</td>
-							<td>Blood Specimen (FBC)</td>
-							<td><span class="tablet tablet-critical">Critical</span></td>
-							<td><p class="text-wrap">Sample Desc</p></td>
-						</tr>
-						<tr>
-							<td>201084/2342233</td>
-							<td>Blood Specimen (FBC)</td>
-							<td><span class="tablet tablet-urgent">Urgent</span></td>
-							<td><p class="text-wrap">Sample Desc</p></td>
-						</tr>
-					</table>
-				</div>
+					<table id="results-table">
+							<tr>
+								<th>Patient DOB / CRN</th>
+								<th>Specimen Type</th>
+								<th>Specimen Triage</th>
+								<th>Sample Description</th>
+							</tr>
+							<!-- <tr id="">
+								<td>201084/2342233</td>
+								<td>Blood Specimen (FBC)</td>
+								<td><span class="tablet tablet-normal">Normal</span></td>
+								<td><p class="text-wrap">Sample Desc</p></td>
+							</tr>
+							<tr>
+								<td>201084/2342233</td>
+								<td>Blood Specimen (FBC)</td>
+								<td><span class="tablet tablet-private">Private</span></td>
+								<td><p class="text-wrap">Sample Desc</p></td>
+							</tr>
+							<tr>
+								<td>201084/2342233</td>
+								<td>Blood Specimen (FBC)</td>
+								<td><span class="tablet tablet-critical">Critical</span></td>
+								<td><p class="text-wrap">Sample Desc</p></td>
+							</tr>
+							<tr>
+								<td>201084/2342233</td>
+								<td>Blood Specimen (FBC)</td>
+								<td><span class="tablet tablet-urgent">Urgent</span></td>
+								<td><p class="text-wrap">Sample Desc</p></td>
+							</tr> -->
+						</div>
+						</table>
+					</div>
 			</div>
 		</main>
 
