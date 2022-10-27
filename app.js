@@ -163,7 +163,7 @@ const defaultTable = `
 </tr>
 `
 
-function matey(e){
+function showResults(e){
 
 	resultsTable.innerHTML = defaultTable
 	
@@ -171,11 +171,19 @@ function matey(e){
 		if(allSpecimens[i].patient.toLowerCase().includes(e.target.value)){
 			let row = document.createElement('tr')
 
+			let triage
+
+			if(allSpecimens[i].triage.toLowerCase().includes('critical')){
+				triage = 'Critical'
+			}else{
+				triage = allSpecimens[i].triage
+			}
+
 			let results = `
 				<tr>
 					<td>${allSpecimens[i].patient}</td>
 					<td>${allSpecimens[i].specimen}</td>
-					<td><span class="tablet tablet-${allSpecimens[i].triage.toLowerCase()}">${allSpecimens[i].triage}</span></td>
+					<td><span class="tablet tablet-${allSpecimens[i].triage.toLowerCase()}">${triage}</span></td>
 					<td><p class="text-wrap">${allSpecimens[i].description}</p></td>
 				</tr>
 				`
@@ -188,7 +196,7 @@ function matey(e){
 searchResults.addEventListener('input',(e)=>{
 	// console.log(e.target.value)
 	if(e.target.value){
-		matey(e)
+		showResults(e)
 	}else{
 		resultsTable.innerHTML = defaultTable
 	}
