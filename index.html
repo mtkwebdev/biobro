@@ -44,12 +44,12 @@
 				<h1>Add Patient Information</h1>
 				<div class="form-content">
 					<form id="patient-record-container-form">
-						<div class="formGroup">
+						<div class="form-group">
 							<label for="patientLastName">Patient Last Name:</label>
 							<input required name="patientLastName" id="patientLastName" type="text" />
 						</div>
 
-						<div class="formGroup">
+						<div class="form-group">
 							<label for="patientFirstNames">Patient First Name:</label>
 							<input required
 								name="patientFirstNames"
@@ -58,7 +58,7 @@
 							/>
 						</div>
 
-						<div class="formGroup">
+						<div class="form-group">
 							<label for="patientAddress">Patient Address:</label>
 							<textarea required
 								name="patientAddress"
@@ -68,21 +68,23 @@
 							></textarea>
 						</div>
 
-						<div class="formGroup">
+						<div class="form-group">
 							<label for="patientDOB">Patient D.O.B:</label>
 							<input required name="patientDOB" id="patientDOB" type="date" />
 						</div>
 
-						<div class="formGroup">
+						<div class="form-group">
 							<label for="patientCRN">Patient CRN:</label>
 							<input required
 								name="patientCRN"
 								id="patientCRN"
 								type="number"
-								max="9999"
+								max="999999"
 							/>
 						</div>
-						<button class="form-button" type="submit">Save</button>
+						<div class="button-container">
+							<button class="form-button" type="submit">Save</button>
+						</div>
 					</form>
 					<img class="new-patient-img" src="./media/edit.webp" alt="" />
 				</div>
@@ -91,18 +93,15 @@
 			<div id="patient-specimens-container" class="tab-content">
 				<h1>Add Specimens</h1>
 				<div class="form-content">
-					<form>
-						<label for="">Select Patient</label>
-						<select required>
-							<option value="0"></option>
-							<option value="1">David Davidson 220830-23424</option>
-							<option value="2">Christopher Christian 021084-8923</option>
-							<option value="3">James Jameson 110110-35632</option>
+					<form id="patient-specimens-container-form">
+						<label for="select-patient">Select Patient</label>
+						<select id="select-patient" name="select-patient" required>
+							<option></option>
 						</select>
 
-						<div class="formGroup">
-							<label for="patientAddress">Specimen Type:</label>
-							<select required>
+						<div class="form-group">
+							<label for="select-specimen">Specimen Type:</label>
+							<select id="select-specimen" name="select-specimen" required>
 								<option></option>
 								<option>Blood Specimen (FBC)</option>
 								<option>Blood Specimen (Routine)</option>
@@ -127,9 +126,9 @@
 							</select>
 						</div>
 
-						<div class="formGroup">
-							<label for="patientAddress">Specimen Triage:</label>
-							<select required>
+						<div class="form-group">
+							<label for="select-triage">Specimen Triage:</label>
+							<select id="select-triage" name="select-triage" required>
 								<option></option>
 								<option>Normal</option>
 								<option>Private</option>
@@ -138,22 +137,26 @@
 							</select>
 						</div>
 
-						<div class="formGroup">
-							<label for="sampleDescription">Sample Description:</label>
+						<div class="form-group">
+							<label for="sample-description">Sample Description:</label>
 							<input required
-								name="sampleDescription"
-								id="sampleDescription"
+								name="sample-description"
+								id="sample-description"
 								type="text"
 							/>
+						</div>
+						<div class="button-container">
+							<button class="form-button" type="submit">Save</button>
 						</div>
 					</form>
 					<img class="test-tubes-img" src="./media/testtubes.webp" alt="" />
 				</div>
-				<button class="form-button" type="button">Save</button>
 			</div>
-
 			<div id="patient-results-container" class="tab-content">
 				<h1>Specimens</h1>
+				<h4>Search for Patient last name, CRN, or Date of Birth to view specimen records</h4>
+				<input type="search" id="select-patient" name="select-patient" required>
+				</input>
 				<div class="flex row">
 					<img class="patient-results-img" src="./media/tests.webp" alt="" />
 					<table>
@@ -163,7 +166,7 @@
 							<th>Specimen Triage</th>
 							<th>Sample Description</th>
 						</tr>
-						<tr>
+						<tr id="">
 							<td>201084/2342233</td>
 							<td>Blood Specimen (FBC)</td>
 							<td><span class="tablet tablet-normal">Normal</span></td>
